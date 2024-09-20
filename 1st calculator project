@@ -1,0 +1,106 @@
+# This is my very first pyhton project, I started learning about a month ago. Trying to get the feel for things. The 1st calculator works, updating the 2nd one
+
+addition = "+"
+subtraction = "-"
+multiplication = "*"
+division = "/"
+   
+def powerfun():
+    power = input("To begin say ON, at any time you would like to stop type OFF : ")
+    while power == "ON":
+        equation = input("Please enter your equation : ")
+        if equation == "OFF":
+            print("Have a Great Day!")
+            del(power)
+            powerfun()
+        equation = equation.split(" ")
+        numone = float(equation[0])
+        typeof = equation[1]
+        numtwo = float(equation[2])
+        if typeof == addition:
+            answer = numone + numtwo
+            print(answer)
+        elif typeof == subtraction:
+            answer = numone - numtwo
+            print(answer)
+        elif typeof == multiplication:
+            answer = numone * numtwo
+            print(answer)
+        elif typeof == division:
+            answer = numone / numtwo
+            print(answer)
+        elif equation == "OFF":
+            print("Please enter a valid response")
+            del(power)
+            powerfun()
+    if power == "OFF":
+        print("have a great day!")
+    else:
+        if power != "ON":
+            print("Please enter a valid response")
+            del(power)
+            powerfun()
+        elif power !="OFF":
+            print("Please enter a valid response")
+            del(power)
+            powerfun()
+    return power
+
+def powerfuntwo():
+    power = input("To begin say ON, at any time you would like to stop type OFF : ")
+    while power == "ON":
+        equation = input("Please enter your equation : ")
+        if equation == "OFF":
+            print("Have a Great Day!")
+            del(power)
+            powerfun()
+        equation = equation.split(" ")
+        numone = float(equation[0])
+        numtwo = float(equation[2])
+        numthr = float(equation[4])
+        numfr = float(equation[6])
+        numfv = float(equation[8])
+        numsx = float(equation[10])
+        typeof = equation[1]
+        typeoftw = equation[3]
+        typeofthr = equation[5]
+        typeoffr = equation[7]
+        typeoffv = equation[9]
+        if typeof == addition:
+            answer = numone + numtwo
+            print(answer)
+        elif typeof == subtraction:
+            answer = numone - numtwo
+            print(answer)
+        elif typeof == multiplication:
+            answer = numone * numtwo
+            print(answer)
+        elif typeof == division:
+            answer = numone / numtwo
+            print(answer)
+        elif equation == "OFF":
+            print("Please enter a valid response")
+            del(power)
+            powerfun()
+    if power == "OFF":
+        print("have a great day!")
+    else:
+        if power != "ON":
+            print("Please enter a valid response")
+            del(power)
+            powerfun()
+        elif power !="OFF":
+            print("Please enter a valid response")
+            del(power)
+            powerfun()
+    return power
+
+input("please format your equation as such 2 + 2 Press enter to continue")
+
+x = input("1 for 1st calculator, 2 for the more complex trail.")
+x = int(x)
+if x == 1:
+    powerfun()
+    
+elif x == 2:
+    powerfuntwo()
